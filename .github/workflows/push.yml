@@ -4,8 +4,8 @@ on: push
 
 jobs:
   first_job:
+    runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - run: npm install
-  second_job:
-    steps:
       - run: npm test
