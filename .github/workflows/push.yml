@@ -1,0 +1,11 @@
+name: "main push"
+
+on: push
+
+jobs:
+  first_job:
+    steps:
+      - run: npm install
+  second_job:
+    steps:
+      - run: npm test
