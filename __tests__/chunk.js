@@ -1,7 +1,7 @@
 import chunk from '../src/chunk.js';
 
 
-
+// Positive tests.
 test('array of four items with chunk of two', () => {
     let array1 = ['a', 'b', 'c', 'd'];
     expect(chunk(array1, 2)).toEqual([['a', 'b'], ['c', 'd']])
@@ -9,6 +9,11 @@ test('array of four items with chunk of two', () => {
 
 test('example 2 chunk', () => {
     expect(chunk(['a', 'b', 'c', 'd'], 3)).toBe([['a', 'b', 'c'], ['d']])
+})
+
+test('example 2 chunk strict equal', () => {
+    let array1 = ['a', 'b', 'c', 'd'];
+    expect(chunk(array1, 3)).toStrictEqual([['a', 'b', 'c'], ['d']])
 })
 
 test('long array of numbers', () => {
@@ -22,5 +27,20 @@ test('long array of numbers', () => {
         [31, 32, 33, 34, 35, 36],
         [37, 38, 39, 40]];
     expect(chunk(array, 6)).toEqual(expected_array)
+})
+
+// Negative tests. Wrong parameter types.
+test('strings as both parameters', () => {
+    expect(chunk("potato", "carrot")).toBeFalsy();
+})
+
+test('string as 2nd parameter', () => {
+
+    let array1 = ['a', 'b', 'c', 'd'];
+    expect(chunk(array1, "string")).toBeFalsy();
+})
+
+test('string as 1st parameter', () => {
+    expect(chunk("string", 2)).toBeFalsy();
 })
 
