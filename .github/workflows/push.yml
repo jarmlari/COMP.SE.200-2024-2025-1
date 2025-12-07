@@ -15,6 +15,7 @@ jobs:
         run: npx c8 --reporter=lcov npm test
 
       - name: Coveralls
+        if: always()
         uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN}}
