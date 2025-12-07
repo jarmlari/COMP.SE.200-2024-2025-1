@@ -25,6 +25,13 @@ test('get a value with a name field', () => {
     expect(get(object2, '["dog"]')).toBe("very good boy")
 })
 
+test('two string parameters', () => {
+    expect(get("string parameter", "another string parameter")).toBeFalsy()
+})
+
+test('boolean and empty parameter', () => {
+    expect(get(true)).toBeFalsy()
+})
 
 
 /**

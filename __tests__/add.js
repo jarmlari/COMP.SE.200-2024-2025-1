@@ -23,6 +23,10 @@ test('adding large numbers', () => {
     expect(add(1000000000, 10)).toBe(1000000010)
 })
 
+test('adding a very small number', () => {
+    expect(add(-1000000000, 10)).toBe(-999999990)
+})
+
 // Giving something else then a number as parameter should return false.
 test('string parameter', () => {
     expect(add(1, "string")).toBeFalsy()

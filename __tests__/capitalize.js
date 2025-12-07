@@ -17,3 +17,20 @@ test('all uppercase', () => {
 test('all lowercase, but the first letter', () => {
     expect(capitalize("kOIRAPUISTO")).toBe("Koirapuisto")
 })
+
+test('boolean as a parameter', () => {
+    expect(capitalize(false)).toBeFalsy()
+})
+
+test('number as a parameter', () => {
+    expect(capitalize(14560)).toBeFalsy()
+})
+
+test('array as a parameter', () => {
+    let array = [1,2,3,4];
+    expect(capitalize(array)).toBeFalsy()
+})
+
+test('empty parameter', () => {
+    expect(capitalize()).toBeFalsy()
+})
