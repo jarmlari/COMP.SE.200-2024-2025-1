@@ -34,3 +34,7 @@ test('number five', () => {
 test('string of "dog"', () => {
     expect(isObject("dog")).toBe(false)
 })
+
+test('empty call', () => {
+    expect(isObject()).toBe(false)
+})
