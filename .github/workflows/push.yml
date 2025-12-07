@@ -8,10 +8,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - run: npm install
-      - run: npm test
+      - name: npm install
+        run: npm install --save-dev c8 coveralls
+          
+      - name: Run tests with coverage
+        run: npx c8 --reporter=lcov npm test
 
       - name: Coveralls
         uses: coverallsapp/github-action@v2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN}}
+          path-to-lcov: ./coverage/lcov.info
