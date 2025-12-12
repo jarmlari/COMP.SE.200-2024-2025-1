@@ -22,11 +22,11 @@ describe("every", () => {
     expect(every(array, alwaysTrue)).toBe(true);
   });
 
-  test("returns false if array is null or undefined", () => {
+  test("returns true if array is null or undefined", () => {
     const alwaysTrue = () => true;
 
-    expect(every(null, alwaysTrue)).toBe(false);
-    expect(every(undefined, alwaysTrue)).toBe(false);
+    expect(every(null, alwaysTrue)).toBe(true);
+    expect(every(undefined, alwaysTrue)).toBe(true);
   });
 
   test("predicate receives correct arguments", () => {

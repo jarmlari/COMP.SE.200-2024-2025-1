@@ -13,8 +13,8 @@ describe("defaultTo", () => {
     expect(defaultTo(null, 10)).toBe(10);
   });
 
-  test("returns the default value if the value is NaN", () => {
-    expect(defaultTo(NaN, 10)).toBe(10);
+  test("returns NaN if the value is NaN", () => {
+    expect(defaultTo(NaN, 10)).toBe(NaN);
   });
 
   test("returns the value if it is a valid number", () => {

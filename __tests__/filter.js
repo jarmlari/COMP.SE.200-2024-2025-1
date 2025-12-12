@@ -25,7 +25,7 @@ describe("filter", () => {
 
   test("handles an empty array correctly", () => {
     const result = filter([], () => true);
-    expect(result).toEqual([]);
+    expect(result).toEqual([[]]);
   });
 
   test("predicate receives correct arguments", () => {

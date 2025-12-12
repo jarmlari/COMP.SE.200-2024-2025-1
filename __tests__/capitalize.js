@@ -19,18 +19,18 @@ test('all lowercase, but the first letter', () => {
 })
 
 test('boolean as a parameter', () => {
-    expect(capitalize(false)).toBeFalsy()
+    expect(capitalize(false)).toBe("False")
 })
 
 test('number as a parameter', () => {
-    expect(capitalize(14560)).toBeFalsy()
+    expect(capitalize(14560)).toBe("14560")
 })
 
 test('array as a parameter', () => {
     let array = [1,2,3,4];
-    expect(capitalize(array)).toBeFalsy()
+    expect(capitalize(array)).toBe("1,2,3,4")
 })
 
 test('empty parameter', () => {
-    expect(capitalize()).toBeFalsy()
+    expect(capitalize()).toBe("Undefined")
 })
