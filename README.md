@@ -1,7 +1,3 @@
-npx c8 --reporter=lcov npm test
-npm test
-npm install 
-npm test FunktionNimi.js komennolla pystyi ajamaan vain tietyn funktion testit
 # COMP.SE.200-2024-2025-1 - Software Testing
 
 ## Purpose of this repository
@@ -18,7 +14,6 @@ The repository contains:
 Removing this license file directly violates terms and conditions of the software under testing.
 Individuals who remove or modify the license file will also carry the consequences.
 
----
 
 ## Getting Started
 
@@ -33,7 +28,6 @@ Individuals who remove or modify the license file will also carry the consequenc
 	npm install
 	```
 
----
 
 ## Running Tests
 
@@ -49,7 +43,6 @@ To run tests for a specific function (e.g., `add.js`):
 npm test add.js
 ```
 
----
 
 ## Viewing Coverage Details
 
@@ -61,6 +54,5 @@ To generate a coverage report:
 npx c8 --reporter=lcov npm test
 ```
 
-The HTML coverage report will be available here: [index.html](./coverage/lcov-report/index.html)
-
----
+The HTML coverage report will be available [here](./coverage/lcov-report/index.html).  
+Open it on a browser to see the results.
